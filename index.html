@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>BYTEBoost</title>
+    <style>
+        .perspective {
+            perspective: 1000px;
+        }
+
+        .preserve-3d {
+            transform-style: preserve-3d;
+        }
+
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .glow-heading {
+            transition: text-shadow 0.3s ease;
+        }
+
+        .glow-heading:hover {
+            text-shadow: 0 0 10px rgba(234, 179, 8, 0.7),
+                0 0 20px rgba(234, 179, 8, 0.5);
+        }
+
+        .glow-white {
+            transition: text-shadow 0.3s ease;
+        }
+
+        .glow-white:hover {
+            text-shadow: 0 0 10px rgba(234, 179, 8, 0.7),
+                0 0 20px rgba(234, 179, 8, 0.5);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+    <!--navbar-->
+    <div class="backdrop-blur-md bg-[#1a1a2e]/80 border-b border-gray-700/30 sticky top-0 z-50">
+        <div class="flex items-center justify-between px-8 py-4 max-2-7xl mx-auto">
+            <a href="#" class="text-white text-2xl font-bold tracking-wide glow-white">
+                BYTE<span class="text-yellow-400 glow-heading">Boost</span>
+            </a>
+            <ul class="flex space-x-8">
+                <li><a href="#" class="text-white hover:text-gray-400">Products</a></li>
+                <li><a href="#" class="text-white hover:text-gray-400">Solution</a></li>
+                <li><a href="#" class="text-white hover:text-gray-400">Resources</a></li>
+                <li><a href="#" class="text-white hover:text-gray-400">Docs</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--hero section-->
+    <div class="container mx-auto px-6 py-16">
+        <h1 class="text-center text-yellow-400 font-bold text-3xl mb-12 glow-heading">Revolutionize Your Workflow with
+            BYTEBoost</h1>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!--left col-->
+            <div>
+                <h2 class=" text-4xl md:text-5xl font-extrabold leading-tight mb-6"> Powering the Future of Tech <br>
+                    <span class="text-yellow-400 glow-heading">BYTEBoost</span> Delivers Speed & Innovation
+                </h2>
+                <p class="text-lg text-gray-300 mb-6"> Experience next-gen performance with our AI-enhanced platform
+                    designed for developers, startups, and tech enthusiasts.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#"
+                        class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-xl transition-all">
+                        Get Started
+                    </a>
+                    <a href="#"
+                        class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-xl transition-all">
+                        Try for Free
+                    </a>
+                </div>
+            </div>
+            <!--right col-->
+            <div class="shadow-[0_4px_14px_rgba(234,179,8,0.3)]">
+                <img src="https://cdn.pixabay.com/photo/2023/02/05/01/09/artificial-intelligence-7768524_1280.jpg"
+                    alt="Tech product" class="rounded-lg shadow-xl w-full">
+            </div>
+        </div>
+    </div>
+
+    <!--features and benefits-->
+    <section class="bg-gray-900 py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">
+                Why Choose <span class="text-yellow-400 glow-heading">BYTEBoost</span>?
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="flip-card perspective h-64" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flip-card-inner relative w-full h-full preserve-3d">
+                        <!-- Front -->
+                        <div
+                            class="absolute inset-0 bg-gray-800 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)]  p-6 flex flex-col items-center justify-center backface-hidden border-2 border-gray-700">
+                            <div class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-yellow-400 font-bold text-xl mb-2 text-center">Dev Friendly</h3>
+                            <p class="text-gray-300 text-sm text-center">Hover to see more</p>
+                        </div>
+                        <!-- Back -->
+                        <div
+                            class="absolute inset-0 bg-yellow-400 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)]  p-6 flex flex-col items-center justify-center rotate-y-180 backface-hidden border-2 border-yellow-500">
+                            <h3 class="text-black font-bold text-xl mb-4 text-center">Dev Friendly</h3>
+                            <ul class="text-black text-sm space-y-2">
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Clean APIs
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Extensive docs
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    SDKs for all platforms
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="flip-card perspective h-64" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flip-card-inner relative w-full h-full preserve-3d">
+                        <!-- Front -->
+                        <div
+                            class="absolute inset-0 bg-gray-800 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)] p-6 flex flex-col items-center justify-center backface-hidden border-2 border-gray-700">
+                            <div class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-yellow-400 font-bold text-xl mb-2 text-center">Lightning Fast</h3>
+                            <p class="text-gray-300 text-sm text-center">Hover to see more</p>
+                        </div>
+                        <!-- Back -->
+                        <div
+                            class="absolute inset-0 bg-yellow-400 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)]  p-6 flex flex-col items-center justify-center rotate-y-180 backface-hidden border-2 border-yellow-500">
+                            <h3 class="text-black font-bold text-xl mb-4 text-center">Lightning Fast</h3>
+                            <ul class="text-black text-sm space-y-2">
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Sub-second response
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Global CDN
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    99.99% uptime
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="flip-card perspective h-64" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flip-card-inner relative w-full h-full preserve-3d">
+                        <!-- Front -->
+                        <div
+                            class="absolute inset-0 bg-gray-800 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)]  p-6 flex flex-col items-center justify-center backface-hidden border-2 border-gray-700">
+                            <div class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-yellow-400 font-bold text-xl mb-2 text-center">AI-Powered</h3>
+                            <p class="text-gray-300 text-sm text-center">Hover to see more</p>
+                        </div>
+                        <!-- Back -->
+                        <div
+                            class="absolute inset-0 bg-yellow-400 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)]  p-6 flex flex-col items-center justify-center rotate-y-180 backface-hidden border-2 border-yellow-500">
+                            <h3 class="text-black font-bold text-xl mb-4 text-center">AI-Powered</h3>
+                            <ul class="text-black text-sm space-y-2">
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Smart automation
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Predictive analytics
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    NLP capabilities
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="flip-card perspective h-64" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flip-card-inner relative w-full h-full preserve-3d">
+                        <!-- Front -->
+                        <div
+                            class="absolute inset-0 bg-gray-800 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)]  p-6 flex flex-col items-center justify-center backface-hidden border-2 border-gray-700">
+                            <div class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-yellow-400 font-bold text-xl mb-2 text-center">Secure</h3>
+                            <p class="text-gray-300 text-sm text-center">Hover to see more</p>
+                        </div>
+                        <!-- Back -->
+                        <div
+                            class="absolute inset-0 bg-yellow-400 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)] p-6 flex flex-col items-center justify-center rotate-y-180 backface-hidden border-2 border-yellow-500">
+                            <h3 class="text-black font-bold text-xl mb-4 text-center">Secure</h3>
+                            <ul class="text-black text-sm space-y-2">
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    End-to-end encryption
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Regular audits
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    SOC2 compliant
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <section class="py-16 bg-gray-900">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-3" data-aos="fade-up" data-aos-delay="100">
+      Get Started in <span class="text-yellow-400" data-aos="fade-up" data-aos-delay="100">4 Simple Steps</span>
+    </h2>
+    <p class="text-gray-400 text-center max-w-xl mx-auto mb-14" data-aos="fade-up" data-aos-delay="100">
+      Integrate <span class="text-yellow-400 glow-heading" data-aos="fade-up" data-aos-delay="100">BYTEBoost</span> into your workflow effortlessly
+    </p>
+
+    <!-- Step Container -->
+    <div class="space-y-16">
+      
+      <!-- STEP 1 -->
+      <div class="flex flex-col md:flex-row items-center gap-10" data-aos="fade-up" data-aos-delay="100">
+        <div class="md:w-1/2">
+          <div class="bg-gray-800 rounded-full p-3 mb-3 inline-block">
+            <svg class="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-1">Sign Up</h3>
+          <p class="text-gray-400 text-sm">Create an account in seconds.</p>
+        </div>
+        <div class="md:w-1/2 shadow-[0_4px_14px_rgba(234,179,8,0.3)]">
+          <img src="https://mytapscore.com/cdn/shop/articles/BLG146_SimpleLab_Log_In_1100x.png?v=1645167349"
+            alt="Sign Up" class="rounded-lg w-full h-52 object-cover shadow-md">
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-10" data-aos="fade-up" data-aos-delay="100">
+        <div class="md:w-1/2">
+          <div class="bg-gray-800 rounded-full p-3 mb-3 inline-block">
+            <svg class="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-1">Pick Tools</h3>
+          <p class="text-gray-400 text-sm">Choose what fits your workflow.</p>
+        </div>
+        <div class="md:w-1/2 shadow-[0_4px_14px_rgba(234,179,8,0.3)]">
+          <img src="https://berita.teknologi.id/uploads/article/1726725535_ai-tools.png"
+            alt="Pick Tools" class="rounded-lg w-full h-52 object-cover shadow-md">
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="flex flex-col md:flex-row items-center gap-10" data-aos="fade-up" data-aos-delay="100">
+        <div class="md:w-1/2">
+          <div class="bg-gray-800 rounded-full p-3 mb-3 inline-block">
+            <svg class="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-1">Integrate</h3>
+          <p class="text-gray-400 text-sm">Plug into your tech stack easily.</p>
+        </div>
+        <div class="md:w-1/2 shadow-[0_4px_14px_rgba(234,179,8,0.3)]">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.ITUeATMiLZBDxJoUhXgN8QHaEF?rs=1&pid=ImgDetMain&o=7&rm=3"
+            alt="Integrate" class="rounded-lg w-full h-52 object-cover shadow-md">
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-10" data-aos="fade-up" data-aos-delay="100">
+        <div class="md:w-1/2">
+          <div class="bg-gray-800 rounded-full p-3 mb-3 inline-block">
+            <svg class="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-1">Launch</h3>
+          <p class="text-gray-400 text-sm">Go live and optimize instantly.</p>
+        </div>
+        <div class="md:w-1/2 shadow-[0_4px_14px_rgba(234,179,8,0.3)]">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.URum-cPfPYDCIHn8A-effQHaE8?w=1470&h=980&rs=1&pid=ImgDetMain&o=7&rm=3"
+            alt="Launch" class="rounded-lg w-full h-52 object-cover shadow-md">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+    <section class="py-12 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-10" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">
+                    Trusted by <span class="text-yellow-400">Developers</span>
+                </h2>
+                <p class="text-gray-400 max-w-md mx-auto text-sm">
+                    What our users say about BYTEBoost
+                </p>
+            </div>
+
+            <!-- 2 Column Grid for Testimonials -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial Card -->
+                <div class="flip-card perspective h-64" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flip-card-inner relative w-full h-full preserve-3d">
+                        <!-- Front -->
+                        <div
+                            class="absolute inset-0 bg-gray-800 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)] p-6 flex flex-col items-center justify-center backface-hidden border-2 border-gray-700">
+                            <img class="w-12 h-12 rounded-full object-cover mb-2"
+                                src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah">
+                            <h3 class="text-yellow-400 font-bold">Sarah J.</h3>
+                            <p class="text-gray-400 text-sm text-center">CTO @ TechStart</p>
+                        </div>
+
+                        <!-- Back - Single div only -->
+                        <div
+                            class="absolute inset-0 bg-yellow-400 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)] p-6 flex flex-col items-center justify-center rotate-y-180 backface-hidden border-2 border-yellow-500">
+                            <p class="text-black text-sm italic text-center mb-3">"Reduced deployment time by 60%. Now
+                                we focus on
+                                innovation."</p>
+                            <div class="flex justify-center text-black text-lg">★ ★ ★ ★ ★</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card -->
+                <div class="flip-card perspective h-64" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flip-card-inner relative w-full h-full preserve-3d">
+                        <!-- Front -->
+                        <div
+                            class="absolute inset-0 bg-gray-800 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)] p-6 flex flex-col items-center justify-center backface-hidden border-2 border-gray-700">
+                            <img class="w-12 h-12 rounded-full object-cover mb-2"
+                                src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ali">
+                            <h3 class="text-yellow-400 font-bold">Ali K.</h3>
+                            <p class="text-gray-400 text-sm text-center">Lead Dev @ FinTech</p>
+                        </div>
+
+                        <!-- Back - Single div only -->
+                        <div
+                            class="absolute inset-0 bg-yellow-400 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)] p-6 flex flex-col items-center justify-center rotate-y-180 backface-hidden border-2 border-yellow-500">
+                            <p class="text-black text-sm italic text-center mb-3">"Saves 20+ hours weekly. Python
+                                support coming soon!"</p>
+                            <div class="flex justify-center text-black text-lg">★ ★ ★ ★ ☆</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card -->
+                <div class="flip-card perspective h-64" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flip-card-inner relative w-full h-full preserve-3d">
+                        <!-- Front -->
+                        <div
+                            class="absolute inset-0 bg-gray-800 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)] p-6 flex flex-col items-center justify-center backface-hidden border-2 border-gray-700">
+                            <img class="w-12 h-12 rounded-full object-cover mb-2"
+                                src="https://randomuser.me/api/portraits/women/68.jpg" alt="Maria">
+                            <h3 class="text-yellow-400 font-bold">Maria L.</h3>
+                            <p class="text-gray-400 text-sm text-center">DevOps Engineer</p>
+                        </div>
+
+                        <!-- Back - Single div only -->
+                        <div
+                            class="absolute inset-0 bg-yellow-400 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)] p-6 flex flex-col items-center justify-center rotate-y-180 backface-hidden border-2 border-yellow-500">
+                            <p class="text-black text-sm italic text-center mb-3">"Flawless CI/CD integration. 3x faster
+                                deployments."</p>
+                            <div class="flex justify-center text-black text-lg">★ ★ ★ ★ ★</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- review card 4-->
+                <div class="flip-card perspective h-64" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flip-card-inner relative w-full h-full preserve-3d">
+                        <!-- Front -->
+                        <div
+                            class="absolute inset-0 bg-gray-800 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)] p-6 flex flex-col items-center justify-center backface-hidden border-2 border-gray-700">
+                            <img class="w-12 h-12 rounded-full object-cover mb-2"
+                                src="https://randomuser.me/api/portraits/men/75.jpg" alt="Alex">
+                            <h3 class="text-yellow-400 font-bold">Alex K.</h3>
+                            <p class="text-gray-400 text-sm text-center">Fullstack Developer</p>
+                        </div>
+
+                        <!-- Back - Single div only -->
+                        <div
+                            class="absolute inset-0 bg-yellow-400 rounded-xl shadow-[0_4px_14px_rgba(234,179,8,0.3)] p-6 flex flex-col items-center justify-center rotate-y-180 backface-hidden border-2 border-yellow-500">
+                            <p class="text-black text-sm italic text-center mb-3">"Game-changing debugging tools. Found
+                                issues in minutes."</p>
+                            <div class="flex justify-center text-black text-lg">★ ★ ★ ★ ★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="py-16 bg-gray-900">
+  <div class="container mx-auto px-6 text-center" data-aos="fade-up" data-aos-delay="100">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Power Up with <span class="text-yellow-400 glow-heading">BYTEBoost</span>?</h2>
+    <p class="text-gray-300 mb-8 max-w-xl mx-auto">Start building faster, smarter, and more securely. Get started for free, no credit card required.</p>
+    <div class="flex justify-center gap-4">
+      <a href="#" class="bg-transparent border border-yellow-400 text-yellow-400 px-6 py-3 rounded-xl hover:bg-yellow-500 hover:text-black transition-all">Get Started</a>
+      <a href="#" class="bg-transparent border border-yellow-400 text-yellow-400 px-6 py-3 rounded-xl hover:bg-yellow-500 hover:text-black transition-all">Book a Demo</a>
+    </div>
+  </div>
+</section>
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-aos="fade-up" data-aos-delay="100">FAQs</h2>
+            <p class="text-gray-400 mb-10 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">Find answers to common questions about <span
+                    class="text-yellow-400 glow-heading" data-aos="fade-up" data-aos-delay="100">BYTEBoost</span></p>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Repeat for each category -->
+                <button onclick="openFAQModal('pricing')"
+                    class="bg-gray-800 hover:bg-yellow-400 hover:text-black text-white font-semibold py-6 rounded-lg shadow transition-all data"
+                    data-aos="fade-up" data-aos-delay="100">💰 Pricing</button>
+                <button onclick="openFAQModal('integration')"
+                    class="bg-gray-800 hover:bg-yellow-400 hover:text-black text-white font-semibold py-6 rounded-lg shadow transition-all"
+                    data-aos="fade-up" data-aos-delay="100">🔗 Integration</button>
+                <button onclick="openFAQModal('security')"
+                    class="bg-gray-800 hover:bg-yellow-400 hover:text-black text-white font-semibold py-6 rounded-lg shadow transition-all"
+                    data-aos="fade-up" data-aos-delay="100">🔒 Security</button>
+                <button onclick="openFAQModal('features')"
+                    class="bg-gray-800 hover:bg-yellow-400 hover:text-black text-white font-semibold py-6 rounded-lg shadow transition-all"
+                    data-aos="fade-up" data-aos-delay="100">⚙️ Features</button>
+                <button onclick="openFAQModal('deployment')"
+                    class="bg-gray-800 hover:bg-yellow-400 hover:text-black text-white font-semibold py-6 rounded-lg shadow transition-all"
+                    data-aos="fade-up" data-aos-delay="100">🚀 Deployment</button>
+                <button onclick="openFAQModal('ai')"
+                    class="bg-gray-800 hover:bg-yellow-400 hover:text-black text-white font-semibold py-6 rounded-lg shadow transition-all"
+                    data-aos="fade-up" data-aos-delay="100">🤖 AI Capabilities</button>
+                <button onclick="openFAQModal('analytics')"
+                    class="bg-gray-800 hover:bg-yellow-400 hover:text-black text-white font-semibold py-6 rounded-lg shadow transition-all"
+                    data-aos="fade-up" data-aos-delay="100">📊 Analytics</button>
+                <button onclick="openFAQModal('support')"
+                    class="bg-gray-800 hover:bg-yellow-400 hover:text-black text-white font-semibold py-6 rounded-lg shadow transition-all"
+                    data-aos="fade-up" data-aos-delay="100">📞 Support</button>
+                <button onclick="openFAQModal('teams')"
+                    class="bg-gray-800 hover:bg-yellow-400 hover:text-black text-white font-semibold py-6 rounded-lg shadow transition-all"
+                    data-aos="fade-up" data-aos-delay="100">👥 Teams & Collaboration</button>
+            </div>
+        </div>
+    </section>
+    <!-- Dynamic FAQ Modal -->
+    <div id="faqModal" class="fixed inset-0 z-50 bg-black bg-opacity-60 hidden items-center justify-center">
+        <div class="bg-gray-900 rounded-lg shadow-xl max-w-2xl w-full mx-4 p-6 relative">
+            <button onclick="closeFAQModal()" class="absolute top-3 right-4 text-white text-xl">✖</button>
+            <h3 id="faqTitle" class="text-2xl font-bold text-yellow-400 mb-4">FAQs</h3>
+
+            <div id="faqQuestions" class="space-y-4 max-h-80 overflow-y-auto"></div>
+
+            <div class="text-sm text-gray-400 mt-4 text-right" id="faqProgress">0 of 0 viewed</div>
+        </div>
+    </div>
+    <section class="bg-gray-900 py-16">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-4"data-aos="fade-up" data-aos-delay="100">
+      Flexible Pricing for Every Team
+    </h2>
+    <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      Choose the plan that fits your goals. No hidden charges.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Starter Plan -->
+      <div class="bg-gray-800 rounded-lg p-8 shadow-lg hover:scale-105 hover:border hover:border-yellow-400 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+
+        <h3 class="text-xl font-bold text-white mb-2">Starter</h3>
+        <p class="text-yellow-400 text-3xl font-extrabold mb-4">$0</p>
+        <ul class="text-gray-300 mb-6 space-y-2 text-sm">
+          <li>✓ 1 Project</li>
+          <li>✓ Basic AI Tools</li>
+          <li>✓ Community Support</li>
+        </ul>
+        <a href="#" class="block text-center bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 rounded">
+          Try for Free
+        </a>
+      </div>
+
+      <!-- Pro Plan -->
+      <div class="bg-gray-800 rounded-lg p-8 shadow-2xl border-2 border-yellow-400 hover:scale-105 transition-transform duration-300 relative" data-aos="fade-up" data-aos-delay="100">
+        <span class="absolute top-0 right-0 bg-yellow-400 text-black text-xs font-semibold px-3 py-1 rounded-bl-lg">
+          Most Popular
+        </span>
+        <h3 class="text-xl font-bold text-white mb-2">Pro</h3>
+        <p class="text-yellow-400 text-3xl font-extrabold mb-4">$29</p>
+        <ul class="text-gray-300 mb-6 space-y-2 text-sm">
+          <li>✓ Unlimited Projects</li>
+          <li>✓ Advanced AI Tools</li>
+          <li>✓ Priority Support</li>
+        </ul>
+        <a href="#" class="block text-center bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 rounded">
+          Get Started
+        </a>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="bg-gray-800 rounded-lg p-8 shadow-lg hover:scale-105 hover:border hover:border-yellow-400 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-bold text-white mb-2">Enterprise</h3>
+        <p class="text-yellow-400 text-3xl font-extrabold mb-4">Custom</p>
+        <ul class="text-gray-300 mb-6 space-y-2 text-sm">
+          <li>✓ Team Access</li>
+          <li>✓ Custom AI Solutions</li>
+          <li>✓ Dedicated Support</li>
+        </ul>
+        <a href="#" class="block text-center bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 rounded">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+    <footer class="w-full bg-gray-950 text-gray-400 pt-14">
+  <div class="w-full px-6 md:px-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-sm">
+      
+      <!-- Branding -->
+      <div>
+        <a href="#" class="text-white text-3xl font-bold mb-4 mt-2 glow-white">BYTE<span class="text-yellow-400 glow-heading">Boost</span></a>
+        <p class="text-gray-400 leading-relaxed text-sm">
+          BYTEBoost empowers developers with lightning-fast AI tools and seamless deployment pipelines. Code smarter. Build faster.
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Navigation</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-yellow-400 transition">Home</a></li>
+          <li><a href="#" class="hover:text-yellow-400 transition">Features</a></li>
+          <li><a href="#" class="hover:text-yellow-400 transition">Pricing</a></li>
+          <li><a href="#" class="hover:text-yellow-400 transition">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Resources</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-yellow-400 transition">Documentation</a></li>
+          <li><a href="#" class="hover:text-yellow-400 transition">API Reference</a></li>
+          <li><a href="#" class="hover:text-yellow-400 transition">Blog</a></li>
+          <li><a href="#" class="hover:text-yellow-400 transition">Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact & Social -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Stay Connected</h3>
+        <ul class="space-y-2">
+          <li><a href="mailto:support@byteboost.ai" class="hover:text-yellow-400 transition">support@byteboost.ai</a></li>
+          <li><a href="#" class="hover:text-yellow-400 transition">Twitter</a></li>
+          <li><a href="#" class="hover:text-yellow-400 transition">LinkedIn</a></li>
+          <li><a href="#" class="hover:text-yellow-400 transition">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-gray-800 mt-12 pt-6 text-center text-xs text-gray-500">
+      © 2025 BYTEBoost. All rights reserved. | Built by Shameen Ghyas
+    </div>
+  </div>
+</footer>
+
+    <script>
+        const faqData = {
+            pricing: [
+                { q: "Is there a free plan?", a: "Yes, BYTEBoost offers a free tier for individuals." },
+                { q: "How is billing handled?", a: "Monthly or annually through Stripe." }
+            ],
+            integration: [
+                { q: "Can I use it with React?", a: "Yes, BYTEBoost supports all major frameworks." },
+                { q: "Is there an API?", a: "Absolutely! Our REST API is well-documented." },
+                { q: "Does it work with Zapier?", a: "Yes, Zapier integrations are available." }
+            ],
+            security: [
+                { q: "Is my data encrypted?", a: "All data is encrypted at rest and in transit." },
+                { q: "Do you offer 2FA?", a: "Yes, we offer two-factor authentication." }
+            ],
+            features: [
+                { q: "What features are included?", a: "Real-time AI tools, version control, and automation." },
+                { q: "Can I customize them?", a: "Yes, many features are modular." }
+            ],
+            deployment: [
+                { q: "How do I deploy?", a: "Click ‘Deploy’ or use CLI for advanced setup." }
+            ],
+            ai: [
+                { q: "What AI is used?", a: "BYTEBoost uses GPT-powered analysis." },
+                { q: "Does it learn from my data?", a: "Only if you enable training mode." }
+            ],
+            analytics: [
+                { q: "What metrics are tracked?", a: "Usage, error logs, and performance trends." },
+                { q: "Can I export analytics?", a: "Yes, exports are available in JSON and CSV." }
+            ],
+            support: [
+                { q: "Is support 24/7?", a: "Yes, live chat is available round the clock." }
+            ],
+            teams: [
+                { q: "Can I manage roles?", a: "Yes, admin panel lets you define roles." },
+                { q: "How many users allowed?", a: "Depends on your plan." }
+            ]
+        };
+
+        let viewed = [];
+
+        function openFAQModal(category) {
+            const modal = document.getElementById('faqModal');
+            const title = document.getElementById('faqTitle');
+            const questionsContainer = document.getElementById('faqQuestions');
+            const progress = document.getElementById('faqProgress');
+
+            title.textContent = `FAQs – ${capitalize(category)}`;
+            questionsContainer.innerHTML = '';
+            viewed = [];
+
+            faqData[category].forEach((item, index) => {
+                const wrapper = document.createElement('div');
+                wrapper.innerHTML = `
+      <button class="w-full text-left text-white font-semibold bg-gray-800 px-4 py-2 rounded hover:bg-yellow-500 transition" onclick="toggleAnswer(${index}, '${category}')">${item.q}</button>
+      <div id="answer-${index}" class="hidden mt-1 text-gray-300 px-4 text-sm">${item.a}</div>
+    `;
+                questionsContainer.appendChild(wrapper);
+            });
+
+            progress.textContent = `0 of ${faqData[category].length} viewed`;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function toggleAnswer(index, category) {
+            const ans = document.getElementById(`answer-${index}`);
+            ans.classList.toggle('hidden');
+
+            if (!viewed.includes(index)) {
+                viewed.push(index);
+                document.getElementById('faqProgress').textContent = `${viewed.length} of ${faqData[category].length} viewed`;
+            }
+        }
+
+        function closeFAQModal() {
+            const modal = document.getElementById('faqModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function capitalize(word) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }
+    </script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+
+</html>
